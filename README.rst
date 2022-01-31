@@ -17,13 +17,13 @@ Example
 + edit the file params.yaml to change the parameter
     + **inputfile:**  Input  file, read  with ase
     + **outpuformat :** Output format type . Default is xyz",
-    + outputfile: Outputfile file. Default is the standard output",
+    + **outputfile:** Outputfile file. Default is the standard output",
     + **scale:** Define a scaling. Default: 1.0",
-    + **rotation :**   "Define a counter-clockwise Rotation by an angle and an axis. Ex 30 deg along 'x' axis: " "'30.0:1.0:0.0:0.0'"
-    + **origin:**  Define the origin from which the rotation and scaling are performed. Can be any vector "
-                             "or one of the keyword ('cm'). Default: '0.0:0.0:0.0'",
+    + **rotation :**   Define a counter-clockwise Rotation by an angle and an axis. Ex 30 deg along 'x' axis:  '30.0:1.0:0.0:0.0'
+    + **origin:**  Define the origin from which the rotation and scaling are performed. Can be any vector
+                             or one of the keyword ('cm'). Default: '0.0:0.0:0.0',
 
-    + **translation:** Define a Translation. Can be any vector or one of the keyword ('-cm', '-ori'). "
+    + **translation:**  Define a Translation. Can be any vector or one of the keyword ('-cm', '-ori'). "
                              "Default: '0.0:0.0:0.0'",
     + **principal:** Rotate the molecule around the center of mass to align it along the principal axis of "
                              "inertia. Overwrite origin and rotation options."
