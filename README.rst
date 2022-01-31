@@ -12,7 +12,7 @@ Example
 -------------------------
 + Read the file  transformation/utils/arg_helper.py to find all the options
 
-+ run the file align.py as example
+
 
 + edit the file params.yaml to change the parameter
     + **inputfile:**  Input  file, read  with ase
@@ -42,6 +42,11 @@ Example
                              "the axial "
                              "direction of a cylinder. Give the list of atoms (separated by comma), than an atom "
                              "number that define the direction of the vector. Example: 1,2,3:10:z",
+
+
+
+
++ run the file transformation/align.py
 
 
 
