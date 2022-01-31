@@ -78,14 +78,6 @@ Installation
 
     $Transformation poetry install
 
-    $Transformation poetry shell
-
-    $Transformation poe torch-cuda
-
-    $Transformation poe torch-geometric-cuda
-
-    $Transformation exit
-
     $Transformation  poetry check
 
     $Transformation  poetry build
