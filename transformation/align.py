@@ -258,7 +258,7 @@ def transform(param_file=None,  replicate=None, writeoutput=True):
 
 
 if __name__ == "__main__":
-    atms = transform()
+    atms = transform(param_file='params.yaml', writeoutput=True)
     box = np.zeros((8, 3))
     a = 3.552
     x = 5 / 4

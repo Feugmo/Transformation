@@ -8,7 +8,7 @@ Support and Documentation
 see docs for documentation, reporting bugs, and getting support.
 
 
-Example
+Usage
 -------------------------
 + Read the file  transformation/utils/arg_helper.py to find all the options
 
