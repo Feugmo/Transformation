@@ -15,7 +15,7 @@ Usage
 
 
 + edit the file params.yaml to change the parameter
-    + **inputfile:**  Input  file, read  with ase
+    + **inputfile:**  Input  file (readable by ASE)
     + **outpuformat :** Output format type . Default is xyz",
     + **outputfile:** Outputfile file. Default is the standard output",
     + **scale:** Define a scaling. Default: 1.0",
