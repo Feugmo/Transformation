@@ -60,6 +60,16 @@ Installation
 
     $ cd Transformation
 
+    $Transformation poetry install
+
+    $Transformation poetry check
+
+    $Transformation poetry run pytest
+
+    $Transformation poetry build
+
+
+
 
 
 
