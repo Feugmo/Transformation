@@ -28,12 +28,10 @@ def transform(param_file=None, replicate=None, writeoutput=True):
         path = Path(param_file).parent
     else:
         try:
-            print('NOOOOOOOOOOOOOOOOO', args.param_file)
             params = get_params(args.param_file)
-            print('YESSSSSSSSSSSSSSSSSSSSS', params)
             path = Path(args.param_file).parent
-        except Exception as err:
-            print(err)
+        except Exception as error:
+            print(error)
 
     for key, value in vars(args).items():
         if key not in params.keys():
