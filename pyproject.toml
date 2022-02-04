@@ -1,8 +1,11 @@
 [tool.poetry]
 name = "Transformation"
 version = "0.1.0"
-description = ""
-authors = ["Feugmo <giresse.feugmo@gmail.com>"]
+description = "Package to re-orient molecules or crystal structures"
+authors = ["Conrard Tetsassi Feugmo <giresse.feugmo@gmail.com>"]
+repository = 'https://github.com/Feugmo/Transformation.git'
+readme = 'README.rst'
+keywords = ['text']
 
 [tool.poetry.dependencies]
 python = "^3.8"

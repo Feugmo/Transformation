@@ -1,11 +1,8 @@
 Transformation
 ==============
 
-Packages to re-orient molecule
+Package to re-orient molecules or crystal structures
 
-Support and Documentation
--------------------------
-see docs for documentation, reporting bugs, and getting support.
 
 
 Usage
@@ -70,6 +67,8 @@ Installation
 
 
 
-
+Support and Documentation
+-------------------------
+see docs for documentation, reporting bugs, and getting support.
 
 
