@@ -15,7 +15,7 @@ import numpy as np
 from ase.io import read, write
 from transformation.tools import Molecule, Rotations
 from transformation.utils.arg_helper import get_params, parse_arguments
-
+import sys
 aseformat = {"POSCAR": "vasp", "xyz": "xyz"}
 
 
@@ -262,4 +262,10 @@ def transform(param_file=None, replicate=None, writeoutput=True):
 
     return atm
 
-# if __name__ == "__main__":
+
+if __name__ == "__main__":
+    try:
+        param_file = sys.argv[0]
+    except Exception as err:
+        print("Please Provide a parameter file")
+    transform(param_file=param_file, replicate=None, writeoutput=True)
