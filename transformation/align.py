@@ -22,14 +22,19 @@ aseformat = {"POSCAR": "vasp", "xyz": "xyz"}
 def transform(param_file=None, replicate=None, writeoutput=True):
     args = parse_arguments()
 
+
     if param_file is not None:
         params = get_params(param_file)
         path = Path(param_file).parent
     else:
-        raise Exception("Please Provide a parameter file")
-    # else:
-    #     params = get_params(args.param_file)
-    #     path = Path(param_file).parent
+        try:
+            print('NOOOOOOOOOOOOOOOOO', args.param_file)
+            params = get_params(args.param_file)
+            print('YESSSSSSSSSSSSSSSSSSSSS', params)
+            path = Path(args.param_file).parent
+        except Exception as err:
+            print(err)
+
     for key, value in vars(args).items():
         if key not in params.keys():
             params[key] = value
@@ -264,8 +269,8 @@ def transform(param_file=None, replicate=None, writeoutput=True):
 
 
 if __name__ == "__main__":
-    try:
-        param_file = sys.argv[0]
-    except Exception as err:
-        print("Please Provide a parameter file")
-    transform(param_file=param_file, replicate=None, writeoutput=True)
+    # try:
+    #     param_file = sys.argv[0]
+    # except Exception as err:
+    #     print("Please Provide a parameter file")
+    transform()

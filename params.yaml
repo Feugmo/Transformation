@@ -1,5 +1,5 @@
-inputfile: 'data/LAMMPS_HEA_83.POSCAR'
-outputfile: 'data/LAMMPS_HEA_83_transformed.POSCAR'
+inputfile: 'tests/data/LAMMPS_HEA_83.POSCAR'
+outputfile: 'tests/data/tetst_HEA_83_transformed.POSCAR'
 outputformat: 'POSCAR'
 scale : 1
 rotation :

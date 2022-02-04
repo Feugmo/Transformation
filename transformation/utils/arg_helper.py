@@ -99,7 +99,10 @@ def parse_arguments():
 
 
 def get_params(param_file):
-    param = yaml.safe_load(open(param_file, 'r'))
+    try:
+        param = yaml.safe_load(open(param_file, 'r'))
+        return param
+    except Exception as err:
+        print(err)
 
-    return param
 # parser = ar
