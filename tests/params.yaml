@@ -1,0 +1,11 @@
+inputfile: 'data/HEA_83.POSCAR'
+outputfile: 'data/HEA_83_transformed.POSCAR'
+outputformat: 'POSCAR'
+scale : 1
+rotation :
+translation: "0.0:0.0:0.0"
+principal : False
+axis:
+bestvector : '846,847:per:847:x'  #'1,14:par:14'
+bestcylinder:
+box:

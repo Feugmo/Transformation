@@ -10,23 +10,26 @@
 """
 import math
 import os
-import pathlib
-from ase.visualize import view
+from pathlib import Path
 import numpy as np
 from ase.io import read, write
-from tools import Molecule, Rotations
-from utils.arg_helper import get_params, parse_arguments
-from ase import Atoms
+from transformation.tools import Molecule, Rotations
+from transformation.utils.arg_helper import get_params, parse_arguments
+
 aseformat = {"POSCAR": "vasp", "xyz": "xyz"}
 
 
-def transform(param_file=None,  replicate=None, writeoutput=True):
+def transform(param_file=None, replicate=None, writeoutput=True):
     args = parse_arguments()
+
     if param_file is not None:
         params = get_params(param_file)
+        path = Path(param_file).parent
     else:
-        params = get_params(args.param_file)
-
+        raise Exception("Please Provide a parameter file")
+    # else:
+    #     params = get_params(args.param_file)
+    #     path = Path(param_file).parent
     for key, value in vars(args).items():
         if key not in params.keys():
             params[key] = value
@@ -35,10 +38,13 @@ def transform(param_file=None,  replicate=None, writeoutput=True):
         raise Exception("No inputfile given")
 
     # open the file if it exists and read the geom
-    if not os.path.isfile(params["inputfile"]):
+    if os.path.isfile(params["inputfile"]):
+        atm = read(params["inputfile"])
+    elif os.path.isfile(os.path.join(path, params["inputfile"])):
+        params["inputfile"] = os.path.join(path, params["inputfile"])
+        atm = read(params["inputfile"])
+    else:
         raise Exception(f" {params['inputfile']} does not exist")
-
-    atm = read(params["inputfile"])
 
     if replicate:
         try:
@@ -245,7 +251,7 @@ def transform(param_file=None,  replicate=None, writeoutput=True):
     elif along == "y":
         atm.rotate(90, "x")
 
-    p = pathlib.Path(params["inputfile"])
+    p = Path(params["inputfile"])
     parent = str(p.parent.absolute())
     stem = p.stem
     # suffix = p.suffix
@@ -256,35 +262,4 @@ def transform(param_file=None,  replicate=None, writeoutput=True):
 
     return atm
 
-
-if __name__ == "__main__":
-    atms = transform(param_file='params.yaml', writeoutput=True)
-    box = np.zeros((8, 3))
-    a = 3.552
-    x = 5 / 4
-    y = 3 / 4
-    z = 3 / 4
-    box[0] = np.array([x, -y, -z]) * a  # A
-    box[1] = np.array([x, y, -z]) * a  # B
-    box[2] = np.array([-x, y, -z]) * a  # C
-    box[3] = np.array([-x, -y, -z]) * a  # D
-    box[4] = np.array([x, -y, z]) * a  # E
-    box[5] = np.array([x, y, z]) * a  # F
-    box[6] = np.array([-x, y, z]) * a  # G
-    box[7] = np.array([-x, -y, z]) * a  # H
-
-    inside, cell = Molecule.in_box2(atms.positions, box)
-    # atms.set_cell(cell)
-
-    # atms.center()
-    # write('atm.png', atms)
-    # view(atms)
-    symbols = [atms[i].symbol for i in inside]
-    coords = [atms[i].position for i in inside]
-
-    transformed_atoms = Atoms(symbols, positions=coords, cell=cell)
-    atms.center()
-    write("sliced_atoms.POSCAR", transformed_atoms, format='vasp')
-
-    transformed_atoms.center()
-    write("sliced_atoms_centered.POSCAR", transformed_atoms, format='vasp')
+# if __name__ == "__main__":

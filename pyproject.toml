@@ -11,7 +11,88 @@ PyYAML = "^6.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
+tox = "^3.24.5"
+black = "^22.1.0"
+isort = "^5.10.1"
+flake8 = "^4.0.1"
+pytest-cov = "^3.0.0"
+Sphinx = "^4.4.0"
+pytest-mock = "^3.7.0"
+pre-commit = "^2.17.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry.extras]
+test = ["pytest"]
+docs = ["sphinx", "sphinx_rtd_theme"]
+
+[tool.black]
+line-length = 120
+skip-string-normalization = true
+#py36 = false
+exclude = '''
+/(
+    \.git
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | \.pytest_cache
+  | dist
+  | build
+  | docs
+  | optimizer
+)/
+'''
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+src_paths = ["tests"]
+skip_glob = ["docs/*"]
+include_trailing_comma = true
+skip = [".tox", ".venv", "optimizer/"]
+
+[tool.flake8]
+show-source = true
+# E123, E125 skipped as they are invalid PEP-8.
+# N802 skipped (function name should be lowercase)
+# N806 skipped (variable in function should be lowercase)
+# F401 skipped (imported but unused) after verifying current usage is valid
+# W503 skipped line break before binary operator
+# C901 skipped: 'MLaunchTool.init' is too complex
+ignore = ["E123", "E125", "N802", "N806", "F401", "W503", "C901", "F401"]
+select = ["B", "C", "E", "F", "W", "T4", "B9"]
+skip_install = true
+builtins = [" _"]
+exclude = '''
+/(
+    \.git
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | \.pytest_cache
+  | dist
+  | build
+  | docs
+  | optimizer
+)/
+'''
+# venv,.venv,.git,.tox,dist,*lib/python*,*egg,*figures/*,__init__.py,build/*,setup.py,hea/util/*,hea/tests/test_*
+count = true
+statistics = true
+max-line-length = 120
+max-complexity = 18
+
+[tool.doc8]
+max-line-length = 120
+
+[tool.autopep8]
+max_line_length = 120
+ignore = ['E501']
+exclude = ''' optimizer/ | .pre-commit-config.yaml '''
+
+[tool.pre-commit]
+pre-commit= "pre-commit"
