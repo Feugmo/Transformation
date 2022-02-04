@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>transformation.tools package &mdash; Transormation v0.1.0</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Transformation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">transformation.tools package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-transformation.tools.Molecule">transformation.tools.Molecule module</a></li>
+<li><a class="reference internal" href="#module-transformation.tools.Quaternions">transformation.tools.Quaternions module</a></li>
+<li><a class="reference internal" href="#module-transformation.tools.Rotations">transformation.tools.Rotations module</a></li>
+<li><a class="reference internal" href="#module-transformation.tools">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Transformation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>transformation.tools package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/transformation.tools.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="transformation-tools-package">
+<h1>transformation.tools package<a class="headerlink" href="#transformation-tools-package" title="Permalink to this headline"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline"></a></h2>
+</section>
+<section id="module-transformation.tools.Molecule">
+<span id="transformation-tools-molecule-module"></span><h2>transformation.tools.Molecule module<a class="headerlink" href="#module-transformation.tools.Molecule" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="transformation.tools.Molecule.MoleculeTools">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MoleculeTools</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atms</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Molecule.MoleculeTools" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="transformation.tools.Molecule.MoleculeTools.ChkAnm">
+<span class="sig-name descname"><span class="pre">ChkAnm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">molref</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Molecule.MoleculeTools.ChkAnm" title="Permalink to this definition"></a></dt>
+<dd><p>Check no total angular momentum is present along the
+linear path connecting molref to self.
+0 = sum_i  atmass_i(molref x self)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="transformation.tools.Molecule.MoleculeTools.FitCylinder">
+<span class="sig-name descname"><span class="pre">FitCylinder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atomlist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">guessVector</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Molecule.MoleculeTools.FitCylinder" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="transformation.tools.Molecule.MoleculeTools.FitHelicalAxis">
+<span class="sig-name descname"><span class="pre">FitHelicalAxis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atomlist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rotmatrix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">center</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rightHelix</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Molecule.MoleculeTools.FitHelicalAxis" title="Permalink to this definition"></a></dt>
+<dd><p>Param rotmatrix:Rotation matrix(new, old) which rotate the system in order that Z is the helical Axis
+Param center:Center of the Helical Axis
+Param radius:radius of the Helical Axis
+Param rightHelix:right(P) Helix:True or left(M) Helix:False
+Return:return the error, the pitch and the phase of the Helical Axis</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="transformation.tools.Molecule.MoleculeTools.RMSD">
+<span class="sig-name descname"><span class="pre">RMSD</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mol2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Molecule.MoleculeTools.RMSD" title="Permalink to this definition"></a></dt>
+<dd><p>Calculate the Root Mean Square Deviation:
+Square root of the mean of the square of the distances between the atoms of two molecules</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="transformation.tools.Molecule.MoleculeTools.angle">
+<span class="sig-name descname"><span class="pre">angle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iatom</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jatom</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">katom</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Molecule.MoleculeTools.angle" title="Permalink to this definition"></a></dt>
+<dd><p>Calculate the angle between three atoms of the same molecule
+:param iatom, jatom, katom:atom index(or list of atom indexes) zero-based</p>
+<blockquote>
+<div><p>return:one angle or a list of angles in radians</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="transformation.tools.Molecule.MoleculeTools.angle_vectors">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">angle_vectors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vec1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vec2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Molecule.MoleculeTools.angle_vectors" title="Permalink to this definition"></a></dt>
+<dd><p>Calculate the angle between two vectors.
+:param vec1, vec2:two ndarray vectors
+:return:the angle in radian</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="transformation.tools.Molecule.MoleculeTools.copy">
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Molecule.MoleculeTools.copy" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="transformation.tools.Molecule.MoleculeTools.dihedral">
+<span class="sig-name descname"><span class="pre">dihedral</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iatom</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jatom</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">katom</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">latom</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Molecule.MoleculeTools.dihedral" title="Permalink to this definition"></a></dt>
+<dd><p>Calculate the dihedral angle between four atoms of the same molecule.
+:param iatom, jatom, katom, latom:atom index(or list of atom indexes) zero-based</p>
+<blockquote>
+<div><p>return:one torsion angle or a list of torsion angles in radians</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="transformation.tools.Molecule.MoleculeTools.distance">
+<span class="sig-name descname"><span class="pre">distance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iatom</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jatom</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Molecule.MoleculeTools.distance" title="Permalink to this definition"></a></dt>
+<dd><p>Calculate the distance between two atoms of the same molecule
+:param iatom, jatom:atom index(or list of atom indexes) zero-based</p>
+<blockquote>
+<div><p>return:one distance or a list of distances</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="transformation.tools.Molecule.MoleculeTools.distance_vect">
+<span class="sig-name descname"><span class="pre">distance_vect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Molecule.MoleculeTools.distance_vect" title="Permalink to this definition"></a></dt>
+<dd><p>Return the distance vector between atom i and atom j</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="transformation.tools.Molecule.MoleculeTools.distances">
+<span class="sig-name descname"><span class="pre">distances</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mol2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Molecule.MoleculeTools.distances" title="Permalink to this definition"></a></dt>
+<dd><p>Return a list of vectors for the distances between each corresponding atoms</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="transformation.tools.Molecule.MoleculeTools.getGErrorForCylinder">
+<span class="sig-name descname"><span class="pre">getGErrorForCylinder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vector</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atomlist</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Molecule.MoleculeTools.getGErrorForCylinder" title="Permalink to this definition"></a></dt>
+<dd><p>Calculate the G function
+return the error, the Center and the radius square</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="transformation.tools.Molecule.MoleculeTools.get_Rsquare_matrix">
+<span class="sig-name descname"><span class="pre">get_Rsquare_matrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atomlist</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Molecule.MoleculeTools.get_Rsquare_matrix" title="Permalink to this definition"></a></dt>
+<dd><p>Rsquare matrix is a matrix whose elements are given by:
+<a href="#id1"><span class="problematic" id="id2">Rquare_</span></a> {alphabeta}= sum_i  <a href="#id3"><span class="problematic" id="id4">R_</span></a> {ialpha} <a href="#id5"><span class="problematic" id="id6">R_</span></a> {ibeta} weight_i
+where <a href="#id7"><span class="problematic" id="id8">R_</span></a> {ialpha} = coord[i, alpha] - centroid
+Param weight:list of weight of size natoms
+Param atomlist:list of atoms</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="transformation.tools.Molecule.MoleculeTools.get_center_of_charge">
+<span class="sig-name descname"><span class="pre">get_center_of_charge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atomlist</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Molecule.MoleculeTools.get_center_of_charge" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="transformation.tools.Molecule.MoleculeTools.get_center_of_mass">
+<span class="sig-name descname"><span class="pre">get_center_of_mass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atomlist</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Molecule.MoleculeTools.get_center_of_mass" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="transformation.tools.Molecule.MoleculeTools.get_centroid">
+<span class="sig-name descname"><span class="pre">get_centroid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atomlist</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Molecule.MoleculeTools.get_centroid" title="Permalink to this definition"></a></dt>
+<dd><p>Param weight:list of weight of size natoms
+Param atomlist:list of atoms</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="transformation.tools.Molecule.MoleculeTools.get_moment_of_charge">
+<span class="sig-name descname"><span class="pre">get_moment_of_charge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atomlist</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Molecule.MoleculeTools.get_moment_of_charge" title="Permalink to this definition"></a></dt>
+<dd><p>similar to moment of inertia but with the charge instead of the mass</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="transformation.tools.Molecule.MoleculeTools.get_moment_of_inertia">
+<span class="sig-name descname"><span class="pre">get_moment_of_inertia</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atomlist</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Molecule.MoleculeTools.get_moment_of_inertia" title="Permalink to this definition"></a></dt>
+<dd><blockquote>
+<div><dl class="simple">
+<dt><a href="#id9"><span class="problematic" id="id10">moi_</span></a> {alphabeta} = sum_i m_i[r^2_i delta_ {alphabeta} - <a href="#id11"><span class="problematic" id="id12">r_</span></a> {ialpha} <a href="#id13"><span class="problematic" id="id14">r_</span></a> {ibeta}]</dt><dd><p>= (sum_i m_i r^2_i)delta_ {alphabeta} - <a href="#id15"><span class="problematic" id="id16">Rsquare_</span></a> {alpha beta}</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>moi = sum_i m_i[vec {r} _i cdot  vec {r} _i identity - vec {r} _i otimes vec {r} _i]</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="transformation.tools.Molecule.MoleculeTools.getatomtype">
+<span class="sig-name descname"><span class="pre">getatomtype</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atnum</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Molecule.MoleculeTools.getatomtype" title="Permalink to this definition"></a></dt>
+<dd><p>Get the atoms of atomic number atnum in the molecule</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="transformation.tools.Molecule.MoleculeTools.isLinear">
+<span class="sig-name descname"><span class="pre">isLinear</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Molecule.MoleculeTools.isLinear" title="Permalink to this definition"></a></dt>
+<dd><p>Guess if a molecule is linear</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="transformation.tools.Molecule.MoleculeTools.match">
+<span class="sig-name descname"><span class="pre">match</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mol2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">improper_rotation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Molecule.MoleculeTools.match" title="Permalink to this definition"></a></dt>
+<dd><p>Match the coordinates between two molecules
+The output  rotation, scale, translation give the following transformation:
+mol1' = sR*mol1 + trans = mol2
+param improper_rotation:if yes, allow for improper rotation if they give a better match
+param scale:use this scaling if given, otherwise, get the best scaling
+(1) HORN, B. J Opt Soc Am A 1987, 4, 629-642.
+(2) Coutsias, E.; Seok, C.; Dill, K. J. Comput. Chem. 2004, 25, 1849-1857.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="transformation.tools.Molecule.MoleculeTools.match_kneller">
+<span class="sig-name descname"><span class="pre">match_kneller</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">molref</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Molecule.MoleculeTools.match_kneller" title="Permalink to this definition"></a></dt>
+<dd><blockquote>
+<div><p>Match the coordinates between two molecules</p>
+</div></blockquote>
+<ol class="arabic simple">
+<li><dl class="simple">
+<dt>Kneller, G. Mol. Simulation 1991, 7, 113-119.</dt><dd><p>The output  rotation, scale, translation give the following transformation:
+mol = sR*molref + trans</p>
+</dd>
+</dl>
+</li>
+</ol>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="transformation.tools.Molecule.MoleculeTools.match_reflexion">
+<span class="sig-name descname"><span class="pre">match_reflexion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mol2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Molecule.MoleculeTools.match_reflexion" title="Permalink to this definition"></a></dt>
+<dd><p>Match the coordinates between two molecules using a reflexion
+instead of rotation</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="transformation.tools.Molecule.MoleculeTools.nbatomtype">
+<span class="sig-name descname"><span class="pre">nbatomtype</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atnum</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Molecule.MoleculeTools.nbatomtype" title="Permalink to this definition"></a></dt>
+<dd><p>Get the number of atoms of atomic number atnum in the molecule</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="transformation.tools.Molecule.MoleculeTools.rotate">
+<span class="sig-name descname"><span class="pre">rotate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rotmat</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Molecule.MoleculeTools.rotate" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="transformation.tools.Molecule.MoleculeTools.rotate_to_moment_of_charge">
+<span class="sig-name descname"><span class="pre">rotate_to_moment_of_charge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atomlist</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Molecule.MoleculeTools.rotate_to_moment_of_charge" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="transformation.tools.Molecule.MoleculeTools.rotate_to_principle_axis">
+<span class="sig-name descname"><span class="pre">rotate_to_principle_axis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atomlist</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Molecule.MoleculeTools.rotate_to_principle_axis" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="transformation.tools.Molecule.MoleculeTools.scale">
+<span class="sig-name descname"><span class="pre">scale</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Molecule.MoleculeTools.scale" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="transformation.tools.Molecule.MoleculeTools.set_to_center_of_charge">
+<span class="sig-name descname"><span class="pre">set_to_center_of_charge</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Molecule.MoleculeTools.set_to_center_of_charge" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="transformation.tools.Molecule.MoleculeTools.set_to_cm">
+<span class="sig-name descname"><span class="pre">set_to_cm</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Molecule.MoleculeTools.set_to_cm" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="transformation.tools.Molecule.MoleculeTools.translate">
+<span class="sig-name descname"><span class="pre">translate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atomlist</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Molecule.MoleculeTools.translate" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="transformation.tools.Molecule.in_box">
+<span class="sig-name descname"><span class="pre">in_box</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">points</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">box3d</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Molecule.in_box" title="Permalink to this definition"></a></dt>
+<dd><p>box3d  =  np array of the shape (8,3) with coordinates in the clockwise order. first the bottom plane is considered then the top one.
+points = array of points with shape (N, 3).</p>
+<p>Returns the indices of the points array which are outside the box3d
+adapted from <a class="reference external" href="https://stackoverflow.com/questions/21037241/how-to-determine-a-point-is-inside-or-outside-a-cube">https://stackoverflow.com/questions/21037241/how-to-determine-a-point-is-inside-or-outside-a-cube</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="transformation.tools.Molecule.in_box2">
+<span class="sig-name descname"><span class="pre">in_box2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">points</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">box</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Molecule.in_box2" title="Permalink to this definition"></a></dt>
+<dd><p>box3d  =  np array of the shape (8,3) with coordinates in the clockwise order. first the bottom plane is considered then the top one.
+points = array of points with shape (N, 3).</p>
+<p>Returns the indices of the points array which are outside the box3d
+adapted from <a class="reference external" href="https://stackoverflow.com/questions/21037241/how-to-determine-a-point-is-inside-or-outside-a-cube">https://stackoverflow.com/questions/21037241/how-to-determine-a-point-is-inside-or-outside-a-cube</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="transformation.tools.Molecule.in_sphere">
+<span class="sig-name descname"><span class="pre">in_sphere</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">point</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">center</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Molecule.in_sphere" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="transformation.tools.Molecule.intersection">
+<span class="sig-name descname"><span class="pre">intersection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lst1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lst2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Molecule.intersection" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-transformation.tools.Quaternions">
+<span id="transformation-tools-quaternions-module"></span><h2>transformation.tools.Quaternions module<a class="headerlink" href="#module-transformation.tools.Quaternions" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="transformation.tools.Quaternions.Quaternion">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Quaternion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ps</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pv</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Quaternions.Quaternion" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="transformation.tools.Quaternions.Quaternion.Reflection">
+<span class="sig-name descname"><span class="pre">Reflection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Quaternions.Quaternion.Reflection" title="Permalink to this definition"></a></dt>
+<dd><p>Do the r'= Q r Q transformation where Q is a unit imaginary
+quaternion and r and r' are vectors. Correspond to a
+reflection through the plane perpendicular to the vector given
+by the imaginary part of the quaternion</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="transformation.tools.Quaternions.Quaternion.Rotate">
+<span class="sig-name descname"><span class="pre">Rotate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Quaternions.Quaternion.Rotate" title="Permalink to this definition"></a></dt>
+<dd><p>Do the r'= Q r Q* transformation where Q is a unit quaternion and r
+and r' are vectors. Correspond to a counter-clockwise rotation</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="transformation.tools.Quaternions.Quaternion.conjugate">
+<span class="sig-name descname"><span class="pre">conjugate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Quaternions.Quaternion.conjugate" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="transformation.tools.Quaternions.Quaternion.get_reflection_matrix">
+<span class="sig-name descname"><span class="pre">get_reflection_matrix</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Quaternions.Quaternion.get_reflection_matrix" title="Permalink to this definition"></a></dt>
+<dd><p>if a quaternion is a unit imaginary quaternion, it can represent a
+reflection.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="transformation.tools.Quaternions.Quaternion.get_rotation_matrix">
+<span class="sig-name descname"><span class="pre">get_rotation_matrix</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Quaternions.Quaternion.get_rotation_matrix" title="Permalink to this definition"></a></dt>
+<dd><p>if a quaternion is a unit quaternion, it can represent a
+counter-clockwise rotation.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="transformation.tools.Quaternions.Quaternion.mult">
+<span class="sig-name descname"><span class="pre">mult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Quaternions.Quaternion.mult" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="transformation.tools.Quaternions.Quaternion.norm">
+<span class="sig-name descname"><span class="pre">norm</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Quaternions.Quaternion.norm" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="transformation.tools.Quaternions.Quaternion.normalized">
+<span class="sig-name descname"><span class="pre">normalized</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Quaternions.Quaternion.normalized" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="transformation.tools.Quaternions.Quaternion.print_rotQuaternion">
+<span class="sig-name descname"><span class="pre">print_rotQuaternion</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Quaternions.Quaternion.print_rotQuaternion" title="Permalink to this definition"></a></dt>
+<dd><p>Q = cos(theta/2) + sin(theta/2) * n
+where n is a unit vector along the rotation axis
+We want theta from -pi -&gt; pi
+But theta, n gives the same quaternion as -theta, -n
+Therefore, theta:0 -&gt; pi, theta/2:0 -&gt; pi/2
+cos &gt; 0 while sin &gt; 0
+If cos &lt; 0, Q' = -Q:correspond to have theta + 2pi
+We can allow theta to be -pi -&gt; pi if we restrict n to be in 4 octant instead of the 8 octant.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="transformation.tools.Quaternions.Quaternion.reciprocal">
+<span class="sig-name descname"><span class="pre">reciprocal</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Quaternions.Quaternion.reciprocal" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-transformation.tools.Rotations">
+<span id="transformation-tools-rotations-module"></span><h2>transformation.tools.Rotations module<a class="headerlink" href="#module-transformation.tools.Rotations" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="transformation.tools.Rotations.Euler_Rotation">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Euler_Rotation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angles</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(2,</span> <span class="pre">0,</span> <span class="pre">2)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">convention</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'intrinsic'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Rotations.Euler_Rotation" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Define a rotation by individual rotation around three axes
+In the &quot;intrinsic&quot; convention, the rotations are around the moving axes
+In the &quot;extrinsic&quot; convention, the rotations are around the fixed axes</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="transformation.tools.Rotations.Euler_Rotation.get_angle_axis">
+<span class="sig-name descname"><span class="pre">get_angle_axis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Rotations.Euler_Rotation.get_angle_axis" title="Permalink to this definition"></a></dt>
+<dd><p>Get the rotation of an angle theta around an axis of rotation
+Angle:0-&gt;pi
+Param:deg:angle is in degrees instead of radians</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="transformation.tools.Rotations.Euler_Rotation.get_rotation_matrix">
+<span class="sig-name descname"><span class="pre">get_rotation_matrix</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Rotations.Euler_Rotation.get_rotation_matrix" title="Permalink to this definition"></a></dt>
+<dd><p>return the rotation matrix
+For intrinsic:rot = axes[0](angles[0]) * axes[1](angles[1]) * axes[2](angles[2])
+For extrinsic:rot = axes[2](angles[2]) * axes[1](angles[1]) * axes[0](angles[0])
+Rotate the lab frame to go the mol frame = U_lab,mol</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="transformation.tools.Rotations.Rotation">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Rotation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">l</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Rotations.Rotation" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="transformation.tools.Rotations.Rotation.get_angle">
+<span class="sig-name descname"><span class="pre">get_angle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Rotations.Rotation.get_angle" title="Permalink to this definition"></a></dt>
+<dd><p>Param:deg:angle is in degrees instead of radians</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="transformation.tools.Rotations.Rotation.get_axis">
+<span class="sig-name descname"><span class="pre">get_axis</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Rotations.Rotation.get_axis" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="transformation.tools.Rotations.Rotation.get_quaternion">
+<span class="sig-name descname"><span class="pre">get_quaternion</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Rotations.Rotation.get_quaternion" title="Permalink to this definition"></a></dt>
+<dd><p>return the quaternion</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="transformation.tools.Rotations.Rotation.get_rotation_matrix">
+<span class="sig-name descname"><span class="pre">get_rotation_matrix</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Rotations.Rotation.get_rotation_matrix" title="Permalink to this definition"></a></dt>
+<dd><p>return the rotation matrix</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="transformation.tools.Rotations.Rotation_frame">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Rotation_frame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lab</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mol</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Rotations.Rotation_frame" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Get the rotation angle between two frames</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="transformation.tools.Rotations.Rotation_frame.get_angle_axis">
+<span class="sig-name descname"><span class="pre">get_angle_axis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Rotations.Rotation_frame.get_angle_axis" title="Permalink to this definition"></a></dt>
+<dd><p>Get the rotation of an angle theta around an axis of rotation
+to go from laboratory to molecular frame
+Angle:0-&gt;pi
+Param:deg:angle is in degrees instead of radians</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="transformation.tools.Rotations.Rotation_frame.get_angles_zxz">
+<span class="sig-name descname"><span class="pre">get_angles_zxz</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Rotations.Rotation_frame.get_angles_zxz" title="Permalink to this definition"></a></dt>
+<dd><p>Calculated the alpha, beta, gamma angles in the zx'z'' (or ZXZ) convention
+return:alpha, beta, gamma angles
+where beta is the angle between the z-axis and the Z-axis and range from 0 -&gt; pi
+where gamma is the angle between the x-axis and the line of nodes and range from -pi -&gt; pi
+where alpha is the angle between the X-axis and the line of nodes and range from -pi -&gt; pi
+The line of nodes is given by(Z cross z)
+Param:deg:alpha, beta, gamma are in degrees instead of radians</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="transformation.tools.Rotations.Rotation_frame.get_angles_zyz">
+<span class="sig-name descname"><span class="pre">get_angles_zyz</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Rotations.Rotation_frame.get_angles_zyz" title="Permalink to this definition"></a></dt>
+<dd><p>Calculated the alpha, beta, gamma angles in the zy'z'' (or ZYZ) convention
+return:alpha, beta, gamma angles
+where beta is the angle between the z-axis and the Z-axis and range from 0 -&gt; pi
+where gamma is the angle between the y-axis and the line of nodes and range from -pi -&gt; pi
+where alpha is the angle between the Y-axis and the line of nodes and range from -pi -&gt; pi
+The line of nodes is given by(Z cross z)
+Param:deg:alpha, beta, gamma are in degrees instead of radians</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="transformation.tools.Rotations.Rotation_frame.get_rotation_matrix">
+<span class="sig-name descname"><span class="pre">get_rotation_matrix</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Rotations.Rotation_frame.get_rotation_matrix" title="Permalink to this definition"></a></dt>
+<dd><p>return the rotation matrix from laboratory to molecular frame</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="transformation.tools.Rotations.get_angle_axis">
+<span class="sig-name descname"><span class="pre">get_angle_axis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rotmat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Rotations.get_angle_axis" title="Permalink to this definition"></a></dt>
+<dd><p>Get the rotation of an angle theta around an axis of rotation
+Angle:0-&gt;pi
+Param:deg:angle is in degrees instead of radians</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="transformation.tools.Rotations.get_arotation_matrix">
+<span class="sig-name descname"><span class="pre">get_arotation_matrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Rotations.get_arotation_matrix" title="Permalink to this definition"></a></dt>
+<dd><p>Get the rotation matrix around on of the axes
+Param:axes:one of(0, 1, 2) for (x, y, z)
+Param angle:0.0 -&gt; pi counter-clockwise rotation
+Param:deg:angle is in degrees instead of radians</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="transformation.tools.Rotations.orient_from">
+<span class="sig-name descname"><span class="pre">orient_from</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ini_vector</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fin_vector</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#transformation.tools.Rotations.orient_from" title="Permalink to this definition"></a></dt>
+<dd><dl class="simple">
+<dt>Give the angle and axis of rotation to orient an object starting in the 'ini_vector' direction</dt><dd><p>toward the &quot;fin_vector&quot; direction</p>
+</dd>
+</dl>
+<p>:param:ini_vector:initial vector direction
+:param:fin_vector:final vector direction</p>
+<blockquote>
+<div><p>The axis of rotation is the vector perpenticular to ini_vector and fin_vector
+angle:0.0 -&gt; pi counter-clockwise rotation
+Param:deg:angle is in degrees instead of radians</p>
+</div></blockquote>
+</dd></dl>
+
+</section>
+<section id="module-transformation.tools">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-transformation.tools" title="Permalink to this headline"></a></h2>
+<p>&#64;Time    : Jan 05 6:01 p.m. 2022
+&#64;Author  : Conrard TETSASSI
+&#64;Email   : <a class="reference external" href="mailto:giresse&#46;feugmo&#37;&#52;&#48;gmail&#46;com">giresse<span>&#46;</span>feugmo<span>&#64;</span>gmail<span>&#46;</span>com</a>
+&#64;File    : __init__.py.py
+&#64;Project : Transformation
+&#64;Software: PyCharm</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Conrard Tetsassi.
+      <span class="lastupdated">Last updated on Feb 03, 2022.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
