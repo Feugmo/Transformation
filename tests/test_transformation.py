@@ -24,6 +24,7 @@ def test_reorient():
 
 
 def extract_box():
+    # atms = transform(param_file=os.path.join(path, 'params.yaml'), writeoutput=True)
     atms = read(os.path.join(path, 'data/test_HEA_83_Transformed.POSCAR'))
     box = np.zeros((8, 3))
     a = 3.552

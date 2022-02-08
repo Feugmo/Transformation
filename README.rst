@@ -7,11 +7,23 @@ Package to re-orient molecules or crystal structures
 
 Usage
 -------------------------
-+ Read the file  transformation/utils/arg_helper.py to find all the options
+
++ python transformation/align.py  --param_file  params.yaml
+
++
+.. code-block:: python
+
+    from transformation.align import transform
+    from transformation.tools import Molecule
+
+    # re-orient the molecule
+    atms = transform(param_file=<<path to params file>>, writeoutput=True)
+
+    # find the atoms inside a box : box is an array with 8 components
+    inside, cell = Molecule.in_box2(atms.positions, box)
 
 
-
-+ edit the file params.yaml to change the parameter
++ Edit the file params.yaml to change the parameter
     + **inputfile:**  Input  file (readable by ASE)
     + **outpuformat :** Output format type . Default is xyz",
     + **outputfile:** Outputfile file. Default is the standard output",
@@ -43,7 +55,7 @@ Usage
 
 
 
-+ run the file transformation/align.py
+
 
 
 
@@ -63,7 +75,6 @@ Installation
 
     $Transformation poetry run pytest
 
-    $Transformation poetry build
 
 
 
